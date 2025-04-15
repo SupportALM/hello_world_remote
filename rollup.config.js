@@ -13,6 +13,8 @@ export default {
   plugins: [
     replace({
       'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env': JSON.stringify({ NODE_ENV: 'production' }),
+      'process': JSON.stringify({ env: { NODE_ENV: 'production' } }),
       preventAssignment: true,
     }),
     inject({
