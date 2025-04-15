@@ -9,15 +9,9 @@ export default defineConfig({
       fileName: () => 'hello-remote.js',
       formats: ['es']
     },
+    // React is NOT external, so it will be bundled for guaranteed compatibility.
     rollupOptions: {
-      // Externalize react to use the host's React
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM'
-        }
-      }
+      external: [],
     }
   },
   plugins: [react()]

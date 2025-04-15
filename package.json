@@ -1,0 +1,19 @@
+{
+    "name": "vite-remote-hello-tool",
+    "version": "1.0.0",
+    "description": "Hello World remote tool for Modular Business Hub, built with Vite + React.",
+    "main": "dist/hello-remote.js",
+    "module": "dist/hello-remote.js",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build"
+    },
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+      "vite": "^4.4.9",
+      "@vitejs/plugin-react": "^4.0.3"
+    }
+  }
