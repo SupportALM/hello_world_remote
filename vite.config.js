@@ -14,11 +14,16 @@ export default defineConfig({
       formats: ['es'] // Use ES module format
     },
     rollupOptions: {
-      // Ensure React/ReactDOM are NOT externalized if you want them bundled
-      external: [],
+      // Make sure to externalize deps that shouldn't be bundled
+      // into your library
+      external: ['react', 'react-dom'],
       output: {
-        // Optional: Configure globals if needed for certain formats, but likely not for 'es'
-        globals: {}
+        // Provide global variables to use in the UMD build
+        // for externalized deps (not strictly needed for 'es' format)
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM'
+        }
       }
     },
     // Ensure minification is enabled for production builds (usually default)
