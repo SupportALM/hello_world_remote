@@ -1,0 +1,18 @@
+{
+  "name": "my-remote-tool",
+  "version": "0.1.0",
+  "description": "A remote-loadable React tool built as a single ES module.",
+  "main": "dist/hello-remote.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-react": "^7.22.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "rollup": "^3.29.4"
+  }
+}
