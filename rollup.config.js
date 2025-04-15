@@ -9,12 +9,13 @@ export default {
     file: 'dist/hello-remote.js',
     format: 'esm',
   },
-  external: ['react'],
+  external: ['react', 'react/jsx-runtime'],
   output: {
     file: 'dist/hello-remote.js',
     format: 'esm',
     globals: {
-      react: 'React'
+      react: 'React',
+      'react/jsx-runtime': 'jsxRuntime'
     }
   },
   plugins: [
