@@ -376,6 +376,17 @@ function requireReact() {
 var reactExports = requireReact();
 var React = /*@__PURE__*/getDefaultExportFromCjs(reactExports);
 
+if (typeof {
+  "env": {
+    "NODE_ENV": "production"
+  }
+} === "undefined") {
+  window.process = {
+    env: {
+      NODE_ENV: "production"
+    }
+  };
+}
 function HelloRemote() {
   return /*#__PURE__*/React.createElement("div", {
     style: {

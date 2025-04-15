@@ -1,8 +1,7 @@
-import babel from '@rollup/plugin-babel';
+import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import replace from '@rollup/plugin-replace';
-import inject from '@rollup/plugin-inject';
+import babel from '@rollup/plugin-babel';
 
 export default {
   input: 'HelloRemote.jsx',
@@ -16,9 +15,7 @@ export default {
       'process.env': JSON.stringify({ NODE_ENV: 'production' }),
       'process': JSON.stringify({ env: { NODE_ENV: 'production' } }),
       preventAssignment: true,
-    }),
-    inject({
-      process: 'process/browser',
+      include: ['**/*'],
     }),
     resolve(),
     commonjs(),
