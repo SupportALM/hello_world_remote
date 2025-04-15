@@ -1,5 +1,5 @@
-import n from "react";
-var d = { exports: {} }, l = {};
+import m from "react";
+var s = { exports: {} }, n = {};
 /**
  * @license React
  * react-jsx-runtime.production.min.js
@@ -9,31 +9,25 @@ var d = { exports: {} }, l = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var p = n, u = Symbol.for("react.element"), c = Symbol.for("react.fragment"), _ = Object.prototype.hasOwnProperty, R = p.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, a = { key: !0, ref: !0, __self: !0, __source: !0 };
-function m(r, e, i) {
-  var o, t = {}, s = null, f = null;
-  i !== void 0 && (s = "" + i), e.key !== void 0 && (s = "" + e.key), e.ref !== void 0 && (f = e.ref);
-  for (o in e)
-    _.call(e, o) && !a.hasOwnProperty(o) && (t[o] = e[o]);
-  if (r && r.defaultProps)
-    for (o in e = r.defaultProps, e)
-      t[o] === void 0 && (t[o] = e[o]);
-  return { $$typeof: u, type: r, key: s, ref: f, props: t, _owner: R.current };
+var _ = m, d = Symbol.for("react.element"), u = Symbol.for("react.fragment"), y = Object.prototype.hasOwnProperty, R = _.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, x = { key: !0, ref: !0, __self: !0, __source: !0 };
+function p(o, e, i) {
+  var r, t = {}, l = null, f = null;
+  i !== void 0 && (l = "" + i), e.key !== void 0 && (l = "" + e.key), e.ref !== void 0 && (f = e.ref);
+  for (r in e)
+    y.call(e, r) && !x.hasOwnProperty(r) && (t[r] = e[r]);
+  if (o && o.defaultProps)
+    for (r in e = o.defaultProps, e)
+      t[r] === void 0 && (t[r] = e[r]);
+  return { $$typeof: d, type: o, key: l, ref: f, props: t, _owner: R.current };
 }
-l.Fragment = c;
-l.jsx = m;
-l.jsxs = m;
-d.exports = l;
-var v = d.exports;
-function x() {
-  return n.useEffect(() => {
-    console.log("HelloRemoteTool component mounted!"), console.log("React version detected by HelloRemoteTool:", n.version);
-  }, []), console.log("Rendering HelloRemoteTool..."), /* @__PURE__ */ v.jsxs("div", { style: { fontSize: 24, padding: 20 }, children: [
-    "Hello World from Bundled Remote Tool! (React Version: ",
-    n.version,
-    ")"
-  ] });
+n.Fragment = u;
+n.jsx = p;
+n.jsxs = p;
+s.exports = n;
+var a = s.exports;
+function v() {
+  return console.log("Rendering HelloRemoteTool (simplified)..."), /* @__PURE__ */ a.jsx("div", { style: { fontSize: 24, padding: 20 }, children: "Hello World from Simplified Remote Tool!" });
 }
 export {
-  x as default
+  v as default
 };
