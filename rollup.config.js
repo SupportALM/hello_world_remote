@@ -9,11 +9,17 @@ export default {
     file: 'dist/hello-remote.js',
     format: 'esm',
   },
+  external: ['react'],
+  output: {
+    file: 'dist/hello-remote.js',
+    format: 'esm',
+    globals: {
+      react: 'React'
+    }
+  },
   plugins: [
     replace({
       'process.env.NODE_ENV': JSON.stringify('production'),
-      'process.env': JSON.stringify({ NODE_ENV: 'production' }),
-      'process': JSON.stringify({ env: { NODE_ENV: 'production' } }),
       preventAssignment: true,
       include: ['**/*'],
     }),
